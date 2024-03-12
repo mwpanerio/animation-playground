@@ -240,6 +240,68 @@ img {
     animation: bubbles-2 2.5s forwards infinite 1s;
 }
 
+.animation-image--oil .animation-image__animated__front,
+.animation-image--oil .animation-image__animated__back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+}
+
+.animation-image--oil .animation-image__animated__back {
+    top: 12px;
+    height: calc(100% - 20px);
+}
+
+.animation-image--oil .animation-image__animated__front {
+    z-index: 3;
+}
+
+.animation-image__animated__oil {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 13px;
+    margin: 0 auto;
+    /* background-color: #0047BB; */
+    width: calc(65% - 18px);
+    height: 70%;
+    left: -2.5%;
+    border-radius: 0 0 75px 94px;
+    /* filter: url('#goo'); */
+    /* overflow: hidden; */
+    background-image: url('/assets/images/coffee.png');
+    background-repeat: repeat-x;
+    background-position: 0 350px;
+    animation: backgroundWave 2s linear infinite alternate;
+}
+
+.animation-image__animated__oil > span {
+    display: block;
+    position: absolute;
+    width: 55%;
+    padding-top: 45%;
+    background-color: inherit;
+    border-radius: 50%;
+    animation: oil-moving 1s linear infinite alternate-reverse;
+    display: none;
+}
+
+.animation-image__animated__oil > span:first-child {
+    left: 0;
+    top: -20%;
+    animation: oil-moving 5s linear infinite alternate-reverse;
+}
+
+.animation-image__animated__oil > span:last-child {
+    right: -3px;
+    top: -45%;
+    animation: oil-moving-2 3s linear infinite alternate-reverse 0.4s;
+}
+
 @keyframes moving {
     0% {
         transform: translateY(0);
@@ -248,21 +310,6 @@ img {
         transform: translateY(-50px);
     }
 }
-
-/* @keyframes bubbles {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    80% {
-        transform: translateY(-200px);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-200px);
-        opacity: 0;
-    }
-} */
 
 @keyframes bubbles {
     0% {
@@ -319,4 +366,43 @@ img {
         transform: translateY(-300px);
         opacity: 0;
     }
+}
+
+@keyframes oil-moving {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10%);
+    }
+    100% {
+        transform: translateY(-40%);
+    }
+}
+
+@keyframes oil-moving-2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(30%);
+    }
+    100% {
+        transform: translateY(-15%);
+    }
+}
+
+@keyframes backgroundWave{
+	0%{
+		background-position: -100px 350px;
+	}
+    50% {
+        background-position: -1500px 0;
+    }
+    100% {
+        background-position: -3000px 0;
+    }
+    /* 100% {
+        background-position: -100px 0;
+    } */
 }
