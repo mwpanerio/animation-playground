@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Playground</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="animation-container">
+        <div class="animation-image animation-image--steel">
+            <div class="animation-image__animated">
+                <img src="./assets/images/metal--large.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--large">
+                <img src="./assets/images/metal--small.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--small">
+                <img src="./assets/images/metal--large.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--large">
+                <img src="./assets/images/metal--small.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--small">
+                <img src="./assets/images/metal--large.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--large">
+                <img src="./assets/images/metal--small.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--small">
+                <img src="./assets/images/metal--large.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--large">
+                <img src="./assets/images/metal--small.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--small">
+                <img src="./assets/images/metal--large.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--large">
+                <img src="./assets/images/metal--small.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--small">
+                <img src="./assets/images/metal--large.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--large">
+                <img src="./assets/images/metal--small.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--small">
+                <img src="./assets/images/metal--large.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--large">
+                <img src="./assets/images/metal--small.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--small">
+                <img src="./assets/images/metal--large.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--large">
+                <img src="./assets/images/metal--small.png" alt="" class="js-animated-image-steel animation-image__animated__item animation-image__animated__item--small">
+            </div>
+            <img src="./assets/images/metal.png" alt="">
+        </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="goo">
+                 <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+<feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo" />
+<feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+        </defs>
+    </svg>
+    <div class="animation-container">
+        <div class="animation-image animation-image--gas">
+            <div class="animation-image__animated">
+                <img src="./assets/images/gas-back.png" alt="" class="animation-image__animated__item animation-image__animated__item--gas">
+                <img src="./assets/images/gas-front.png" alt="" class="animation-image__animated__item animation-image__animated__item--gas">
+                <div class="animation-image__gas__fill">
+                    <span class="gas-fill">
+                        <span class="gas-fill__item"></span>
+                        <span class="gas-fill__item"></span>
+                        <span class="gas-fill__item"></span>
+                        <span class="gas-fill__item"></span>
+                        <span class="gas-fill__item"></span>
+                        <span class="gas-fill__bubbles gas-fill__bubbles--1"></span>
+                        <span class="gas-fill__bubbles gas-fill__bubbles--2"></span>
+                        <span class="gas-fill__bubbles gas-fill__bubbles--3"></span>
+                        <span class="gas-fill__bubbles gas-fill__bubbles--4"></span>
+                        <span class="gas-fill__bubbles gas-fill__bubbles--5"></span>
+                        <span class="gas-fill__bubbles gas-fill__bubbles--6"></span>
+                    </span>
+                </div>
+                <img src="./assets/images/gas-background.png" alt="" class="animation-image__animated__item animation-image__animated__item--gas animation-image__animated__item--gas__background">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/lib/jquery.min.js"></script>
+    <script src="./assets/lib/gsap.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.animation-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-image {
+    width: 600px;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+
+.animation-image > img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 80px;
+}
+
+.animation-image__animated {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow: hidden;
+}
+
+.animation-image--steel .animation-image__animated__item {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    top: -170px;
+}
+
+.animation-image--steel .animation-image__animated__item--small {
+    width: 120px;
+    top: -80px;
+}
+
+.animation-image--steel .animation-image__animated__item:is(:nth-child(1), :nth-child(9)) {
+    left: 5%;
+    top: -170px;
+    transform: scale(-1, 1);
+}
+
+.animation-image--steel .animation-image__animated__item:is(:nth-child(2), :nth-child(10)) {
+    left: 25%;
+    top: -80px;
+    transform: scale(-1, 1);
+}
+
+.animation-image--steel .animation-image__animated__item:is(:nth-child(3), :nth-child(11)) {
+    left: 55%;
+    top: -200px;
+}
+
+.animation-image--steel .animation-image__animated__item:is(:nth-child(4), :nth-child(12)) {
+    left: 60%;
+    top: -90px;
+    transform: scale(-1, 1);
+}
+
+.animation-image--steel .animation-image__animated__item:is(:nth-child(5), :nth-child(13)) {
+    left: 15%;
+    top: -200px;
+}
+
+.animation-image--steel .animation-image__animated__item:is(:nth-child(6), :nth-child(14)) {
+    left: 60%;
+    top: -100px;
+    transform: scale(-1, 1);
+}
+
+.animation-image--steel .animation-image__animated__item:is(:nth-child(7), :nth-child(15)) {
+    left: 58%;
+    top: -250px;
+    transform: scale(-1, 1);
+}
+
+.animation-image--steel .animation-image__animated__item:is(:nth-child(8), :nth-child(16)) {
+    left: 30%;
+    top: -200px;
+}
+
+.animation-image--gas .animation-image__animated {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animation-image__animated__item--gas {
+    height: 100%;
+    width: auto;
+}
+
+.animation-image__animated__item--gas:nth-child(2) {
+    z-index: 3;
+}
+
+.animation-image__animated__item--gas:nth-child(2),
+.animation-image__animated__item--gas__background {
+    position: absolute;
+}
+
+.animation-image__gas__fill {
+    position: absolute;
+    top: 55px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: calc(100% - 170px);
+    height: calc(100% - 82px);
+    border-radius: 150px;
+    overflow: hidden;
+    z-index: 2;
+    opacity: 0.5;
+}
+
+.gas-fill {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background-color: #0047BB;
+    display: block;
+    filter: url('#goo');
+}
+
+.gas-fill__item {
+    width: 120px;
+    height: 120px;
+    background-color: inherit;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    filter: url('#goo');
+    animation: moving 1.5s ease infinite alternate-reverse;
+    transform: translateY(0);
+}
+
+.gas-fill__item:nth-child(1) {
+    top: -30px;
+    left: -24px;
+}
+
+.gas-fill__item:nth-child(2) {
+    top: -25px;
+    left: 55px;
+    animation-delay: 0.35s;
+}
+
+.gas-fill__item:nth-child(3) {
+    top: -17px;
+    left: 145px;
+    animation-delay: 0.15s;
+}
+
+.gas-fill__item:nth-child(4) {
+    top: -35px;
+    left: 239px;
+    animation-delay: 0.5s;
+}
+
+.gas-fill__item:nth-child(5) {
+    top: -18px;
+    left: 330px;
+    animation-delay: 0.05s;
+}
+
+.gas-fill__bubbles {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: -80px;
+    right: 0;
+    margin: 0 auto;
+    top: 0;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: inherit;
+}
+
+.gas-fill__bubbles--1 {
+    top: 0;
+    left: -80px;
+    animation: bubbles 2.5s linear infinite;
+}
+
+.gas-fill__bubbles--2 {
+    left: 100px;
+    width: 60px;
+    height: 60px;
+    animation: bubbles-2 2.5s forwards infinite 0.5s;
+}
+
+.gas-fill__bubbles--3 {
+    width: 30px;
+    height: 30px;
+    left: -100px;
+    animation: bubbles-3 2.5s forwards infinite 1s;
+}
+
+.gas-fill__bubbles--4 {
+    width: 30px;
+    height: 30px;
+    left: -2px;
+    animation: bubbles-3 2.5s forwards infinite 1.5s;
+}
+
+.gas-fill__bubbles--5 {
+    width: 40px;
+    height: 40px;
+    left: 100px;
+    animation: bubbles-3 2.5s forwards infinite 0s;
+}
+
+.gas-fill__bubbles--6 {
+    width: 30px;
+    height: 30px;
+    left: -80px;
+    animation: bubbles-2 2.5s forwards infinite 1s;
+}
+
+@keyframes moving {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-50px);
+    }
+}
+
+/* @keyframes bubbles {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-200px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+} */
+
+@keyframes bubbles {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-200px);
+        opacity: 0.5;
+    }
+    90% {
+        transform: translateY(-200px);
+        opacity: 0.25;
+    }
+    100% {
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+}
+
+@keyframes bubbles-2 {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-250px);
+        opacity: 0.5;
+    }
+    90% {
+        transform: translateY(-250px);
+        opacity: 0.25;
+    }
+    100% {
+        transform: translateY(-250px);
+        opacity: 0;
+    }
+}
+
+@keyframes bubbles-3 {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(-300px);
+        opacity: 0.5;
+    }
+    90% {
+        transform: translateY(-300px);
+        opacity: 0.25;
+    }
+    100% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+}
