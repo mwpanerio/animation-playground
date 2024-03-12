@@ -273,7 +273,7 @@ img {
     border-radius: 0 0 75px 94px;
     /* filter: url('#goo'); */
     /* overflow: hidden; */
-    background-image: url('/assets/images/coffee.png');
+    background-image: url('https://mwpanerio.github.io/animation-playground/assets/images/coffee.png');
     background-repeat: repeat-x;
     background-position: 0 350px;
     animation: backgroundWave 2s linear infinite alternate;
